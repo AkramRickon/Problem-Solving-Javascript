@@ -1,14 +1,20 @@
-const arr = [
+const grid = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
 ]
-let ans = [];
-for (let i = 0; i < arr.length; i++) {
-    const temp = [];
-    for (let j = 0; j < arr[i].length; j++) {
-        temp.push(arr[j][i]);
+
+
+const transform = (grid) => {
+    let transformedArray = [];
+    for (let i = 0; i < grid.length; i++) {
+        let temp = [];
+        for (let j = 0; j < grid.length; j++) {
+            temp.push(grid[j][i]);
+        }
+        transformedArray.push(temp);
     }
-    ans.push(temp);
+    return transformedArray;
 }
-console.log(ans);
+
+console.log(transform(grid));
