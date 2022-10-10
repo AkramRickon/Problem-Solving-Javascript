@@ -6,12 +6,12 @@ const solve = (arr, n) => {
     for (let i = 0; i < arr.length; i++) {
         temp.push(arr[i]);
         if (temp.length === n) {
-            ans.push([...temp]);
-            temp.length = 0;
+            ans.push(temp);
+            temp = [];
         }
     }
     if (temp.length) {
-        ans.push([...temp]);
+        ans.push(temp);
     }
     return ans;
 }
