@@ -1,5 +1,7 @@
+function LongestWord(sen) { 
 
-
-
-let longest = "";
-return sen.replace(/[^A-Za-z0-9\s]/g, "").split(' ').reduce((a, b) => a.length >= b.length ? a : b, '')
+    // code goes here  
+    return sen.replace(/[^A-Za-z0-9\s]/g,'')
+              .split(' ')
+              .reduce((prev,curr)=>curr.length > prev.length ? curr :prev)
+  }
